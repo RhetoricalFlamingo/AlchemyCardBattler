@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dbd334-ab3d-432e-ae12-d5f485d4a537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardInit.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +21,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5244" />
+          <entry key="cs" value="5673" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5244" />
+          <entry key="C#" value="5673" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,14 +64,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CardInit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="624">
+              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
               <folding>
-                <marker date="1567023196897" expanded="false" signature="6:101" ph="..." />
-                <marker date="1567023196897" expanded="true" signature="140:4468" ph="{...}" />
-                <marker date="1567023196897" expanded="true" signature="189:4466" ph="{...}" />
-                <marker date="1567023196897" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
-                <marker date="1567023196897" expanded="true" signature="4469:4651" ph="/* for making your deck, do smth like: ... */" />
+                <marker date="1567024275643" expanded="false" signature="6:101" ph="..." />
+                <marker date="1567024275643" expanded="true" signature="140:4797" ph="{...}" />
+                <marker date="1567024275643" expanded="true" signature="189:4795" ph="{...}" />
+                <marker date="1567024275643" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
+                <marker date="1567024275643" expanded="true" signature="4798:4980" ph="/* for making your deck, do smth like: ... */" />
               </folding>
             </state>
           </provider>
@@ -107,7 +101,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="267" />
     <option name="y" value="112" />
     <option name="width" value="4300" />
@@ -172,12 +166,12 @@
       <option name="presentableId" value="Default" />
       <updated>1566941464993</updated>
       <workItem from="1566941472500" duration="2449000" />
-      <workItem from="1567013795662" duration="7688000" />
+      <workItem from="1567013795662" duration="8491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10137000" />
+    <option name="totallyTimeSpent" value="10940000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,14 +250,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CardInit.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="624">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
           <folding>
-            <marker date="1567023196897" expanded="false" signature="6:101" ph="..." />
-            <marker date="1567023196897" expanded="true" signature="140:4468" ph="{...}" />
-            <marker date="1567023196897" expanded="true" signature="189:4466" ph="{...}" />
-            <marker date="1567023196897" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
-            <marker date="1567023196897" expanded="true" signature="4469:4651" ph="/* for making your deck, do smth like: ... */" />
+            <marker date="1567024275643" expanded="false" signature="6:101" ph="..." />
+            <marker date="1567024275643" expanded="true" signature="140:4797" ph="{...}" />
+            <marker date="1567024275643" expanded="true" signature="189:4795" ph="{...}" />
+            <marker date="1567024275643" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
+            <marker date="1567024275643" expanded="true" signature="4798:4980" ph="/* for making your deck, do smth like: ... */" />
           </folding>
         </state>
       </provider>

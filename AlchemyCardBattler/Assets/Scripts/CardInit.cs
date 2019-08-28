@@ -52,7 +52,9 @@ public class CardInit : MonoBehaviour
         cardList[23] = new Card("Yetti Yarrow", 2, -2, 0, "The Yetti were hunted to near extinction for their marrow due to a misprint in alchemy texts. Yetti Yarrow, however, grants the user immense power.");
         cardList[24] = new Card("Leviathan Lard", 1,2,4, "Boil and drink before bed for a good fortnights rest");
         cardList[25] = new Card("Pickpocket Pinky", 0,0,5, "This quick finger will have you moving quickly in no time.");
-        cardList[26] = new Card("Broken Bracelet", 0,0,5, "");
+        cardList[26] = new Card("Broken Bracelet", 0,0,5, "A broken heart is said to cause death if the love was strong enough. This is because of the immense magical energy created by that love.");
+        cardList[27] = new Card("Mandrake", 0,0,5, "The Mandrake root is said to sing lullabies when cooked and can provide nutrients for a week of meals.");
+        
         
     
     }
