@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dbd334-ab3d-432e-ae12-d5f485d4a537" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlchemyCardBattler/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardInit.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,17 +18,18 @@
         <counts>
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5673" />
+          <entry key="cs" value="5769" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5673" />
+          <entry key="C#" value="5769" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,14 +67,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CardInit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+            <state relative-caret-position="19">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
               <folding>
-                <marker date="1567024275643" expanded="false" signature="6:101" ph="..." />
-                <marker date="1567024275643" expanded="true" signature="140:4797" ph="{...}" />
-                <marker date="1567024275643" expanded="true" signature="189:4795" ph="{...}" />
-                <marker date="1567024275643" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
-                <marker date="1567024275643" expanded="true" signature="4798:4980" ph="/* for making your deck, do smth like: ... */" />
+                <marker date="1567120127377" expanded="true" signature="6:78" ph="..." />
+                <marker date="1567120127377" expanded="true" signature="117:4774" ph="{...}" />
+                <marker date="1567120127377" expanded="true" signature="166:4772" ph="{...}" />
+                <marker date="1567120127377" expanded="true" signature="214:402" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
+                <marker date="1567120127377" expanded="true" signature="4775:4957" ph="/* for making your deck, do smth like: ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mouse.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <marker date="1567119880722" expanded="true" signature="6:78" ph="..." />
+                <marker date="1567119880722" expanded="true" signature="115:405" ph="{...}" />
+                <marker date="1567119880722" expanded="true" signature="174:403" ph="{...}" />
+                <marker date="1567119880722" expanded="true" signature="287:397" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -84,6 +102,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mouse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardInit.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -91,6 +110,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/CardProperties.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardInit.cs" />
       </list>
     </option>
@@ -101,11 +121,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="267" />
-    <option name="y" value="112" />
-    <option name="width" value="4300" />
-    <option name="height" value="2333" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="3873" />
+    <option name="height" value="2093" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,12 +134,26 @@
     </navigator>
     <panes>
       <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,11 +201,12 @@
       <updated>1566941464993</updated>
       <workItem from="1566941472500" duration="2449000" />
       <workItem from="1567013795662" duration="8491000" />
+      <workItem from="1567114513139" duration="2047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10940000" />
+    <option name="totallyTimeSpent" value="12987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -186,7 +221,7 @@
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17907445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18175721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -248,16 +283,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mouse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <marker date="1567119880722" expanded="true" signature="6:78" ph="..." />
+            <marker date="1567119880722" expanded="true" signature="115:405" ph="{...}" />
+            <marker date="1567119880722" expanded="true" signature="174:403" ph="{...}" />
+            <marker date="1567119880722" expanded="true" signature="287:397" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CardInit.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        <state relative-caret-position="19">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
           <folding>
-            <marker date="1567024275643" expanded="false" signature="6:101" ph="..." />
-            <marker date="1567024275643" expanded="true" signature="140:4797" ph="{...}" />
-            <marker date="1567024275643" expanded="true" signature="189:4795" ph="{...}" />
-            <marker date="1567024275643" expanded="true" signature="237:425" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
-            <marker date="1567024275643" expanded="true" signature="4798:4980" ph="/* for making your deck, do smth like: ... */" />
+            <marker date="1567120127377" expanded="true" signature="6:78" ph="..." />
+            <marker date="1567120127377" expanded="true" signature="117:4774" ph="{...}" />
+            <marker date="1567120127377" expanded="true" signature="166:4772" ph="{...}" />
+            <marker date="1567120127377" expanded="true" signature="214:402" ph="/* visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0 ... */" />
+            <marker date="1567120127377" expanded="true" signature="4775:4957" ph="/* for making your deck, do smth like: ... */" />
           </folding>
         </state>
       </provider>
