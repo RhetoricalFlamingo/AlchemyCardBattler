@@ -720,13 +720,15 @@
           <e p="PotMoves.cs" t="Include" />
           <e p="TurnManager.cs" t="Include" />
         </e>
+        <e p="Shaders" t="Include">
+          <e p="Soup.shader" t="Include" />
+          <e p="Soup2.shader" t="Include" />
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

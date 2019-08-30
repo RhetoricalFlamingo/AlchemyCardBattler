@@ -17,20 +17,63 @@ public class PotInventory : MonoBehaviour
 
     public int oTemp, oVisc, oCol;
 
-    private int[] colors = new int[7];
+    public int[] colors = new int[7];
 
     public Text visc, temp, color, lOne, lTwo, lAmp, lRev;
     public GameObject tester;
+    public Material Soup1;
+    public Material Soup2;
+    public Material Bubbles;
+    public GameObject BubblesVOneTOne;
+    public GameObject BubblesVOneTTwo;
+    public GameObject BubblesVTwoTOne;
+    public GameObject BubblesVTwoTTwo;
+    public ParticleSystem Steam;
+    public AnimationCurve SizeSteam0;
+    public AnimationCurve SizeSteam1;
+    public AnimationCurve SizeSteam3;
+    
+    private Color Red = new Vector4(191f,0,0,0f);
+    private Color Blue = new Vector4(0, 25, 191,1f);
     
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         potInv = new List<Card>();
+        
     }
 
     void Update()
     {
+        var main = Steam.main;
+        if (oCol == 0)
+        {
+            Soup1.SetColor("_Color0", Red);
+            //Soup2.SetColor("_Color0", Red);
+            //Bubbles.SetColor("_EmissionColor", Red);
+        }
+        else if (oCol == 3)
+        {
+            Soup1.SetColor("_Color0", Blue);
+        }
+
+        if (oTemp == 1)
+        {
+            main.startSize = 2;
+        }
+        else if (oTemp >= 2)
+        {
+            main.startSize = 6f;
+        }
+        else
+        {
+            main.startSize = 0;
+        }
+        
+       
+
+        //Soup1.SetColor("_TintColor", Red);
         Test();
     }
 
