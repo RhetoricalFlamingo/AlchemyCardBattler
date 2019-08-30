@@ -8,7 +8,7 @@ public class TurnManager : MonoBehaviour
     public static TurnManager tm;
 
     public int turnState = 0; // 0 = divider, 1 = play ingredient, 2 = take action
-    public bool playerOne;
+    public bool playerOne = false;
     public GameObject turnDivider;
     public bool started, drag;
 
