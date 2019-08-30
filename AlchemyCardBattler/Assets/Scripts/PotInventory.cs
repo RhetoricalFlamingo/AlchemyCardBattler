@@ -29,9 +29,11 @@ public class PotInventory : MonoBehaviour
 
     
     private Color Red = new Vector4(60f,0,0,0f);
-    private Color Blue = new Vector4(0, 5, 30,0f);
+    private Color Blue = new Vector4(0, 5, 40,0f);
     private Color Green = new Vector4(2, 40, 0,0f);
     private Color Yellow = new Vector4(40f, 40f, 0,0f);
+    private Color Purple = new Vector4(31f, 0f, 191,0f);
+    private Color Black = new Vector4(0f, 0f, 0,0f);
     
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,14 @@ public class PotInventory : MonoBehaviour
         else if (oCol == 4)
         {
             Soup1.SetColor("_Color0", Yellow);
+        }
+        else if (oCol == 5)
+        {
+            Soup1.SetColor("_Color0", Black);
+        }
+        else if (oCol == 6)
+        {
+            Soup1.SetColor("_Color0", Purple);
         }
 
         if (oTemp == 1)
@@ -131,6 +141,13 @@ public class PotInventory : MonoBehaviour
 
     void WeirdEffect(Card c)
     {
+        switch (c.title){
+            case "Dragon Dust":
+                PotInventory.instance.potInv.Clear();
+                break;
+            default:
+                break;
+        }
     }
 
     int ColorNum()
