@@ -135,6 +135,11 @@ public class PotInventory : MonoBehaviour
 
     int ColorNum()
     {
+        for (int i = 0; i < colors.Length; i++)
+        {
+            colors[i] =0;
+        }
+
         for (int i = 0; i < potInv.Count; i++)
         {
             colors[potInv[i].color]++;

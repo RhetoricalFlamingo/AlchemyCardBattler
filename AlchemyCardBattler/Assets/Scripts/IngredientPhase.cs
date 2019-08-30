@@ -22,8 +22,6 @@ public class IngredientPhase : MonoBehaviour
         {
             Draw();
         }
-
-        this.GetComponent<Middle>().Hand();
         TurnManager.tm.turn++;
     }
 
