@@ -8,11 +8,12 @@ public class ActionTurn : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("KILL ME");
+        TurnManager.tm.turn++;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -10,7 +10,18 @@ public class Middle : MonoBehaviour
 
 
     private void OnEnable()
-    {  
+    {
+        if (TurnManager.tm.playerOne)
+        {
+            pOne.SetActive(true);
+            pTwo.SetActive(false);
+
+        }
+        else {
+            pTwo.SetActive(true);
+            pOne.SetActive(false);
+
+        }
         TurnManager.tm.turnDivider.SetActive(true);
          
         for (int i = 0; i < TurnManager.tm.card.Count; i++)
@@ -46,7 +57,7 @@ public class Middle : MonoBehaviour
             TurnManager.tm.turnDivider.SetActive(false);
             Debug.Log(TurnManager.tm.currentHand[0].title);
 
-            if (TurnManager.tm.turnState % 2 == 0 && TurnManager.tm.turnState != 0 || TurnManager.tm.turnState % 3 == 0 && TurnManager.tm.turnState != 0)
+            if ((TurnManager.tm.turn % 2 == 0 && TurnManager.tm.turn != 0) || (TurnManager.tm.turn % 3 == 0 && TurnManager.tm.turn != 0))
             {
                 TurnManager.tm.turnState = 2;
 

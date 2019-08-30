@@ -34,6 +34,6 @@ Material:
     - _Opacity: 1
     - __dirty: 0
     m_Colors:
-    - _Color0: {r: 191, g: 0, b: 0, a: 0}
+    - _Color0: {r: 60, g: 0, b: 0, a: 0}
     - _Speed: {r: 0.3, g: 0.21, b: 0, a: 0}
     - _Vector2: {r: 5, g: 5, b: 0, a: 0}

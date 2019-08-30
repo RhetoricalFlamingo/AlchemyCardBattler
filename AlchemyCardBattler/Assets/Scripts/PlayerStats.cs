@@ -16,9 +16,10 @@ public class PlayerStats : MonoBehaviour
 
     private bool alive = true;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        TurnManager.tm.turn++;
+
     }
 
     // Update is called once per frame
