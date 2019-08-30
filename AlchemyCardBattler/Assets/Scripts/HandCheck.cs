@@ -43,12 +43,12 @@ public class HandCheck : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("Cauldron"))
                     {
                         Debug.Log("PlayCard");
-                        
-                        
-                        holding = false;
-                       
-                        TurnManager.tm.turnState = 0;
-                        this.gameObject.SetActive(false);
+
+                    TurnManager.tm.turnState = 0;
+                    Destroy(this.gameObject);
+
+                    holding = false;
+                      
 
                     }
                    

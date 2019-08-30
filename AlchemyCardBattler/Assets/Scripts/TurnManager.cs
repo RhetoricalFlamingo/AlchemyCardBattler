@@ -17,6 +17,14 @@ public class TurnManager : MonoBehaviour
     public List<Card> pOneHand;
     public List<Card> pTwoHand;
 
+    public GameObject cardPrefab;
+
+    public List<GameObject> card = new List<GameObject>();
+    public List<Text> title = new List<Text>();
+    public List<Text> desc = new List<Text>();
+
+    public int turn = 0;
+
     private void Awake()
     {
 
@@ -44,6 +52,7 @@ public class TurnManager : MonoBehaviour
         {
             case 0:
                 GetComponent<Middle>().enabled = true;
+                GetComponent<IngredientPhase>().enabled = false;
                 break;
             case 1:
                 GetComponent<Middle>().enabled = false;
@@ -53,14 +62,17 @@ public class TurnManager : MonoBehaviour
                 break;
         }
 
+        if ((float)turn % 2 != 0)
+        {
+            playerOne = false;
+        }
+        else
+        {
+            playerOne = true;
+        }
+
+
         Debug.Log(turnState);
-    }
-
-    public void Draw()
-    {
-        pOneHand.Add(CardInit.cm.cardList[Random.Range(0, 27)]);
-
-        // animation code here
     }
     
     void CreateHands()
