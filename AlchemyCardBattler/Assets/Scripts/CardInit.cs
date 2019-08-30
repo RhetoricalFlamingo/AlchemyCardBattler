@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CardInit : MonoBehaviour
 {
-    private Card[] cardList;
+    public Card[] cardList;
+    public static CardInit cm;
 
     void Awake()
     {
-        cardList = new Card[20];
+        cardList = new Card[28];
         // visc - 1, temp - 2, amplify - 3, reverse - 4, N/A - 0
         //color: 0 red, 1 clear, 2 green, 3 blue, 4 yellow, 5 black, 6 purple
         //Name, component, degree, color, description
@@ -53,9 +54,16 @@ public class CardInit : MonoBehaviour
         cardList[25] = new Card("Pickpocket Pinky", 0,0,5, "This quick finger will have you moving quickly in no time.");
         cardList[26] = new Card("Broken Bracelet", 0,0,5, "A broken heart is said to cause death if the love was strong enough. This is because of the immense magical energy created by that love.");
         cardList[27] = new Card("Mandrake", 0,0,5, "The Mandrake root is said to sing lullabies when cooked and can provide nutrients for a week of meals.");
-        
-        
-    
+
+
+        if (cm == null)
+        {
+            cm = this;
+        }
+        else if(cm != this)
+        {
+            Destroy(this);
+        }
     }
 }
 /* for making your deck, do smth like:
