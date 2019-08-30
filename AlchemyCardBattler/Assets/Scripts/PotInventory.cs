@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PotInventory : MonoBehaviour
 {
+    public static PotInventory instance;
     public List<Card> potInv;
     public Card one, two;
 
@@ -14,7 +15,7 @@ public class PotInventory : MonoBehaviour
     private int tempRev = 1;
     int tempCol = 0;
 
-    private int oTemp, oVisc, oCol;
+    public int oTemp, oVisc, oCol;
 
     private int[] colors = new int[7];
 
@@ -24,6 +25,7 @@ public class PotInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         potInv = new List<Card>();
     }
 
@@ -110,6 +112,7 @@ public class PotInventory : MonoBehaviour
             }
         }
 
+        oCol = col;
         return col;
     }
 
