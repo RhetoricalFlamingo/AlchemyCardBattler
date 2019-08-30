@@ -46,6 +46,7 @@ public class TurnManager : MonoBehaviour
                 GetComponent<Middle>().enabled = true;
                 break;
             case 1:
+                GetComponent<Middle>().enabled = false;
                 GetComponent<IngredientPhase>().enabled = true;
                 break;
             default:

@@ -10,8 +10,14 @@
         <e p="Scripts" t="Include">
           <e p="Card.cs" t="Include" />
           <e p="CardInit.cs" t="Include" />
+          <e p="Dragger.cs" t="Include" />
           <e p="HandCheck.cs" t="Include" />
+          <e p="IngredientPhase.cs" t="Include" />
+          <e p="Middle.cs" t="Include" />
           <e p="Mouse.cs" t="Include" />
+          <e p="PotInventory.cs" t="Include" />
+          <e p="PotMoves.cs" t="Include" />
+          <e p="TurnManager.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

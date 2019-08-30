@@ -10,12 +10,14 @@ public class HandCheck : MonoBehaviour
     public Vector3 StandardCardSize;
 
     public Vector3 EndCardSize;
+    private Vector3 OriginalCardPos;
 
     public bool holding;
     RaycastHit hit;
     Ray ray;
     int layerMask = 1 << 9;
-    
+
+    private bool placing = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,18 +31,35 @@ public class HandCheck : MonoBehaviour
         
         if (holding)
         {
+            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(newPosition);
+
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out hit)) {
-                gameObject.transform.position = hit.point;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
+                    placing = true;
+                    
+                    
                     if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("Cauldron"))
                     {
                         Debug.Log("PlayCard");
+                        
+                        
+                        holding = false;
+                       
+                        TurnManager.tm.turnState = 0;
+                        this.gameObject.SetActive(false);
+
                     }
+                   
                 }
+                else
+                {
+                    placing = false;
+                }
+            
                
-            }
+            
         }
     }
 
@@ -52,22 +71,26 @@ public class HandCheck : MonoBehaviour
             StartCoroutine(LerpScale());
         }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                
+        if (Input.GetMouseButtonDown(0))
+        {
 
-                switch (holding)
-                {
-                    case true:
-                        holding = false;
-                        break;
-                    case false:
-                        holding = true;
-                        break;
-                        
+
+            switch (holding)
+            {
+                case true:
+                    if (!placing) {
+                    holding = false;
+                    gameObject.transform.position = OriginalCardPos;
                 }
-          
+                    break;
+                case false:
+                    holding = true;
+                    OriginalCardPos = gameObject.transform.position;
+                    break;
             }
+        
+
+        }
        
     }
 

@@ -9,10 +9,19 @@ public class Middle : MonoBehaviour
     public Text[] title = new Text[5];
     public Text[] desc = new Text[5];
 
+    private bool bootup;
+    
     int turn = 0;
 
     private void OnEnable()
-    {
+    {  
+        TurnManager.tm.turnDivider.SetActive(true);
+
+        for (int i = 0; i < 5; i++)
+        {
+            card[i].gameObject.SetActive(true);
+        }
+
         if (TurnManager.tm.playerOne)
         {
             TurnManager.tm.playerOne = false;
