@@ -5,15 +5,30 @@ using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
-    int turnState = 0; // 0 = divider, 1 = play ingredient, 2 = take action
-    bool playerOne;
+    public static TurnManager tm;
+
+    public int turnState = 0; // 0 = divider, 1 = play ingredient, 2 = take action
+    public bool playerOne;
     public GameObject turnDivider;
-    bool started;
+    public bool started, drag;
 
     public List<Card> currentHand;
 
     public List<Card> pOneHand;
     public List<Card> pTwoHand;
+
+    private void Awake()
+    {
+
+        if (tm == null)
+        {
+            tm = this;
+        }
+        else if (tm != this)
+        {
+            Destroy(this);
+        }
+    }
 
     private void Start()
     {
@@ -28,60 +43,25 @@ public class TurnManager : MonoBehaviour
         switch (turnState)
         {
             case 0:
-                Middle();
+                GetComponent<Middle>().enabled = true;
                 break;
             case 1:
-                PlayIngredient();
+                GetComponent<IngredientPhase>().enabled = true;
                 break;
             default:
                 break;
         }
+
+        Debug.Log(turnState);
     }
 
-    public void Middle()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if (playerOne)
-            {
-                playerOne = false;
-                currentHand = pTwoHand;
-            }
-            else
-            {
-                playerOne = true;
-                currentHand = pOneHand;
-            }
-            turnDivider.SetActive(false);
-
-            if (started)
-            {
-                Draw();
-            }
-            else {
-                started = true;
-            }
-
-            turnState = 1;
-        }
-    }
     public void Draw()
     {
         pOneHand.Add(CardInit.cm.cardList[Random.Range(0, 27)]);
 
         // animation code here
     }
-
-    public void PlayIngredient()
-    {
-
-    }
-
-    public void TakeAction()
-    {
-
-    }
-
+    
     void CreateHands()
     {
         pOneHand = new List<Card>();
