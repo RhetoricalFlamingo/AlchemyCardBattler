@@ -6,7 +6,7 @@ Shader "New Amplify Shader"
 	{
 		_Cutoff( "Mask Clip Value", Float ) = 0.5
 		_Opacity("Opacity", Range( 0 , 1)) = 0
-		[HDR]_Color0("Color 0", Color) = (4,0,0,0)
+		[HDR]_Color0("Color 0", Color) = (0.7490196,0,0,0)
 		_Vector2("Vector 2", Vector) = (5,5,0,0)
 		_Speed("Speed", Vector) = (1,1,0,0)
 		_TextureSample1("Texture Sample 1", 2D) = "white" {}
@@ -135,12 +135,12 @@ Shader "New Amplify Shader"
 }
 /*ASEBEGIN
 Version=16900
-6;1.6;1524;797;2265.335;137.2553;1.730623;True;False
+6;1.6;1524;797;2265.335;132.0634;1.730623;True;False
 Node;AmplifyShaderEditor.Vector2Node;12;-1912.938,557.3532;Float;False;Property;_Speed;Speed;4;0;Create;True;0;0;False;0;1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.Vector2Node;10;-2041.999,388.2826;Float;False;Property;_Vector2;Vector 2;3;0;Create;True;0;0;False;0;5,5;5,5;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.FunctionNode;2;-1609.232,420.9967;Float;True;RadialUVDistortion;-1;;1;051d65e7699b41a4c800363fd0e822b2;0;7;60;SAMPLER2D;_Sampler602;False;1;FLOAT2;1,1;False;11;FLOAT2;0,0;False;65;FLOAT;1;False;68;FLOAT2;1,1;False;47;FLOAT2;1,1;False;29;FLOAT2;0,0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.SamplerNode;13;-1148.894,590.9092;Float;True;Property;_TextureSample1;Texture Sample 1;5;0;Create;True;0;0;False;0;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.ColorNode;8;-853.8445,-2.772778;Float;False;Property;_Color0;Color 0;2;1;[HDR];Create;True;0;0;False;0;4,0,0,0;4,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;8;-853.8445,-2.772778;Float;False;Property;_Color0;Color 0;2;1;[HDR];Create;True;0;0;False;0;0.7490196,0,0,0;4,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;9;-402.1565,3.505002;Float;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.NoiseGeneratorNode;1;-1163.784,263.4855;Float;True;Simplex2D;1;0;FLOAT2;0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;11;-417.6444,228.0718;Float;False;Property;_Opacity;Opacity;1;0;Create;True;0;0;False;0;0;0;0;1;0;1;FLOAT;0
@@ -155,4 +155,4 @@ WireConnection;0;2;9;0
 WireConnection;0;9;11;0
 WireConnection;0;10;13;0
 ASEEND*/
-//CHKSM=FFC527122E5F8EB18FA24FF838B707949E9E3A1D
+//CHKSM=25057FCAF582971F42F15725FF5030B4AC367F27
