@@ -5,14 +5,25 @@ using UnityEngine.UI;
 
 public class Middle : MonoBehaviour
 {
-    public GameObject[] card = new GameObject[5];
-    public Text[] title = new Text[5];
-    public Text[] desc = new Text[5];
+    private bool bootup;
+    public GameObject pOne, pTwo;
 
-    int turn = 0;
 
     private void OnEnable()
-    {
+    {  
+        TurnManager.tm.turnDivider.SetActive(true);
+         
+        for (int i = 0; i < TurnManager.tm.card.Count; i++)
+        {
+            Debug.Log("Cleaning");
+            if (TurnManager.tm.card[i] == null)
+            {
+                TurnManager.tm.card.RemoveAt(i);
+                TurnManager.tm.title.RemoveAt(i);
+                TurnManager.tm.desc.RemoveAt(i);
+            }
+        }
+
         if (TurnManager.tm.playerOne)
         {
             TurnManager.tm.playerOne = false;
@@ -25,18 +36,6 @@ public class Middle : MonoBehaviour
         }
 
         Hand();
-
-        if (TurnManager.tm.started)
-        {
-            TurnManager.tm.Draw();
-        }
-        else if (turn > 1)
-        {
-            TurnManager.tm.started = true;
-        }
-
-        Hand();
-        turn++;
     }
 
     // Update is called once per frame
@@ -45,17 +44,22 @@ public class Middle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0))
         {
             TurnManager.tm.turnDivider.SetActive(false);
+            Debug.Log(TurnManager.tm.currentHand[0].title);
+
+            if (TurnManager.tm.turnState % 2 == 0)
+            {
+
+            }
             TurnManager.tm.turnState = 1;
-            this.enabled = false;
         }
     }
 
     public void Hand()
     {
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < TurnManager.tm.card.Count; i++)
         {
-            title[i].text = TurnManager.tm.currentHand[i].title;
-            desc[i].text = TurnManager.tm.currentHand[i].desc;
+            TurnManager.tm.title[i].text = TurnManager.tm.currentHand[i].title;
+            TurnManager.tm.desc[i].text = TurnManager.tm.currentHand[i].desc;
         }
     }
 
