@@ -124,6 +124,8 @@ public class PlayerStats : MonoBehaviour
         }
 
         PotInventory.instance.oCol = 1;
+
+        TurnManager.tm.turnState = 0;
     }
 
     public void Dump()
@@ -137,5 +139,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         PotInventory.instance.oCol = 1;
+
+        TurnManager.tm.turnState = 0;
     }
 }
