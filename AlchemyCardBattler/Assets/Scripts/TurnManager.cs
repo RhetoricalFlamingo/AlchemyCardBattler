@@ -53,7 +53,7 @@ public class TurnManager : MonoBehaviour
             case 0:
                 GetComponent<Middle>().enabled = true;
                 GetComponent<IngredientPhase>().enabled = false;
-                GetComponent<PlayerStats>().enabled = true;
+                GetComponent<PlayerStats>().enabled = false;
                 break;
             case 1:
                 GetComponent<Middle>().enabled = false;

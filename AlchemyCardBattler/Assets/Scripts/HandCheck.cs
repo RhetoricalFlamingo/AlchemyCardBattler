@@ -45,6 +45,16 @@ public class HandCheck : MonoBehaviour
                         Debug.Log("PlayCard");
 
                     TurnManager.tm.turnState = 0;
+
+                    if (TurnManager.tm.playerOne)
+                    {
+                        TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pOneLast = OriginalCardPos;
+                    }
+                    else
+                    {
+                        TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pTwoLast = OriginalCardPos;
+                    }
+
                     Destroy(this.gameObject);
 
                     holding = false;
