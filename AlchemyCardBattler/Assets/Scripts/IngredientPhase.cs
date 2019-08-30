@@ -18,7 +18,7 @@ public class IngredientPhase : MonoBehaviour
 
         StartCoroutine(WaitToDrag());
 
-        if (TurnManager.tm.started)
+        if (TurnManager.tm.started) 
         {
             Draw();
         }
