@@ -24,17 +24,14 @@ public class PotInventory : MonoBehaviour
     public Material Soup1;
     public Material Soup2;
     public Material Bubbles;
-    public GameObject BubblesVOneTOne;
-    public GameObject BubblesVOneTTwo;
-    public GameObject BubblesVTwoTOne;
-    public GameObject BubblesVTwoTTwo;
+
     public ParticleSystem Steam;
-    public AnimationCurve SizeSteam0;
-    public AnimationCurve SizeSteam1;
-    public AnimationCurve SizeSteam3;
+
     
-    private Color Red = new Vector4(191f,0,0,0f);
-    private Color Blue = new Vector4(0, 25, 191,1f);
+    private Color Red = new Vector4(60f,0,0,0f);
+    private Color Blue = new Vector4(0, 5, 30,0f);
+    private Color Green = new Vector4(2, 40, 0,0f);
+    private Color Yellow = new Vector4(40f, 40f, 0,0f);
     
     // Start is called before the first frame update
     void Start()
@@ -52,10 +49,17 @@ public class PotInventory : MonoBehaviour
             Soup1.SetColor("_Color0", Red);
             //Soup2.SetColor("_Color0", Red);
             //Bubbles.SetColor("_EmissionColor", Red);
+        }else if (oCol == 2)
+        {
+            Soup1.SetColor("_Color0", Green);
         }
         else if (oCol == 3)
         {
             Soup1.SetColor("_Color0", Blue);
+        }
+        else if (oCol == 4)
+        {
+            Soup1.SetColor("_Color0", Yellow);
         }
 
         if (oTemp == 1)
