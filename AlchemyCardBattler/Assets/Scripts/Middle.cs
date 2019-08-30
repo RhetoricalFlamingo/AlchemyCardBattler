@@ -45,7 +45,6 @@ public class Middle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0))
         {
             TurnManager.tm.turnDivider.SetActive(false);
-            Debug.Log(TurnManager.tm.currentHand[0].title);
             TurnManager.tm.turnState = 1;
             this.enabled = false;
         }

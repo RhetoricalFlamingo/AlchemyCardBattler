@@ -15,4 +15,6 @@ public class IngredientPhase : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         TurnManager.tm.drag = true;
     }
+
+    // wherever this ends, if playerone disable this, swap the playerone bool and enable the middle phase
 }

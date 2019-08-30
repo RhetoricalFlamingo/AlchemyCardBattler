@@ -25,26 +25,28 @@ public class HandCheck : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        
-        if (holding)
-        {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out hit)) {
-                gameObject.transform.position = hit.point;
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+    {
+       // if (TurnManager.tm.drag)
+        //{
+            if (holding)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit))
                 {
-                    if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("Cauldron"))
+                    if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                     {
-                        Debug.Log("PlayCard");
+                        if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("Cauldron"))
+                        {
+                            Debug.Log("PlayCard");
+                        }
                     }
+
                 }
-               
             }
         }
-    }
+   // }
 
- 
+
     private void OnMouseOver()
     {
         if (!bigBoi)
@@ -52,9 +54,11 @@ public class HandCheck : MonoBehaviour
             StartCoroutine(LerpScale());
         }
 
+       // if (TurnManager.tm.drag)
+        //{
             if (Input.GetMouseButtonDown(0))
             {
-                
+
 
                 switch (holding)
                 {
@@ -64,10 +68,11 @@ public class HandCheck : MonoBehaviour
                     case false:
                         holding = true;
                         break;
-                        
-                }
-          
+
+              //  }
             }
+
+        }
        
     }
 
