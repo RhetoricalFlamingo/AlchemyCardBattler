@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PotMoves : MonoBehaviour
 {
+    public static PotMoves instance;
     public GameObject potCanvas;
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
+        potCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,9 +24,12 @@ public class PotMoves : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (TurnManager.tm.turnState == 2)
         {
-            potCanvas.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
+            {
+                potCanvas.SetActive(true);
+            }
         }
     }
 }

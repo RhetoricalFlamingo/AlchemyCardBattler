@@ -24,12 +24,13 @@ public class PotInventory : MonoBehaviour
     public Material Soup1;
     public Material Soup2;
     public Material Bubbles;
+    public Light Shimmer;
 
     public ParticleSystem Steam;
 
     
     private Color Red = new Vector4(60f,0,0,0f);
-    private Color Blue = new Vector4(0, 5, 30,0f);
+    private Color Blue = new Vector4(0, 5, 60,0f);
     private Color Green = new Vector4(2, 40, 0,0f);
     private Color Yellow = new Vector4(40f, 40f, 0,0f);
     
@@ -47,19 +48,23 @@ public class PotInventory : MonoBehaviour
         if (oCol == 0)
         {
             Soup1.SetColor("_Color0", Red);
+            Shimmer.color = Red;
             //Soup2.SetColor("_Color0", Red);
             //Bubbles.SetColor("_EmissionColor", Red);
         }else if (oCol == 2)
         {
             Soup1.SetColor("_Color0", Green);
+            Shimmer.color = Green;
         }
         else if (oCol == 3)
         {
             Soup1.SetColor("_Color0", Blue);
+            Shimmer.color = Blue;
         }
         else if (oCol == 4)
         {
             Soup1.SetColor("_Color0", Yellow);
+            Shimmer.color = Yellow;
         }
 
         if (oTemp == 1)

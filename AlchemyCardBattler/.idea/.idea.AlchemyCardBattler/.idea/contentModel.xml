@@ -708,11 +708,13 @@
           <e p="README.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActionTurn.cs" t="Include" />
           <e p="Card.cs" t="Include" />
           <e p="CardInit.cs" t="Include" />
           <e p="Dragger.cs" t="Include" />
           <e p="HandCheck.cs" t="Include" />
           <e p="IngredientPhase.cs" t="Include" />
+          <e p="LightFlux.cs" t="Include" />
           <e p="Middle.cs" t="Include" />
           <e p="Mouse.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
@@ -728,7 +730,9 @@
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

@@ -27,49 +27,51 @@ public class HandCheck : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        
-        if (holding)
+    {
+        if (TurnManager.tm.turnState == 1)
         {
-            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(newPosition);
+            if (holding)
+            {
+                Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 9.5f);
+                gameObject.transform.position = Camera.main.ScreenToWorldPoint(newPosition);
 
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
                     placing = true;
-                    
-                    
+
+
                     if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("Cauldron"))
                     {
                         Debug.Log("PlayCard");
 
-                    TurnManager.tm.turnState = 0;
+                        TurnManager.tm.turnState = 0;
 
-                    if (TurnManager.tm.playerOne)
-                    {
-                        TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pOneLast = OriginalCardPos;
+                        if (TurnManager.tm.playerOne)
+                        {
+                            TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pOneLast = OriginalCardPos;
+                        }
+                        else
+                        {
+                            TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pTwoLast = OriginalCardPos;
+                        }
+
+                        Destroy(this.gameObject);
+
+                        holding = false;
+
+
                     }
-                    else
-                    {
-                        TurnManager.tm.gameObject.GetComponent<IngredientPhase>().pTwoLast = OriginalCardPos;
-                    }
 
-                    Destroy(this.gameObject);
-
-                    holding = false;
-                      
-
-                    }
-                   
                 }
                 else
                 {
                     placing = false;
                 }
-            
-               
-            
+
+
+
+            }
         }
     }
 
