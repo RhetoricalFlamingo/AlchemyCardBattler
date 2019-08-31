@@ -124,7 +124,8 @@ public class PlayerStats : MonoBehaviour
         }
 
         PotInventory.instance.oCol = 1;
-        PotInventory.instance.potInv.Clear();
+
+        TurnManager.tm.turnState = 0;
     }
 
     public void Dump()
@@ -138,6 +139,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         PotInventory.instance.oCol = 1;
-        PotInventory.instance.potInv.Clear();
+
+        TurnManager.tm.turnState = 0;
     }
 }

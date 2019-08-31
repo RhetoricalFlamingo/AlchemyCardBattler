@@ -46,11 +46,15 @@ public class Middle : MonoBehaviour
             TurnManager.tm.turnDivider.SetActive(false);
             Debug.Log(TurnManager.tm.currentHand[0].title);
 
-            if (TurnManager.tm.turnState % 2 == 0)
+            if (TurnManager.tm.turnState % 2 == 0 && TurnManager.tm.turnState != 0 || TurnManager.tm.turnState % 3 == 0 && TurnManager.tm.turnState != 0)
             {
+                TurnManager.tm.turnState = 2;
 
             }
-            TurnManager.tm.turnState = 1;
+            else
+            {
+                TurnManager.tm.turnState = 1;
+            }
         }
     }
 
